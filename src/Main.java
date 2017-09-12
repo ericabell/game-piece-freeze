@@ -20,5 +20,16 @@ public class Main {
         gp1.move(20,20);
         System.out.println(gp1.getPositionX() + ", " + gp1.getPositionY());
 
+        // unfreeze the piece and verify
+        gp1.unfreeze();
+        if( !gp1.frozen ) {
+            System.out.println("We unfroze the piece!");
+        }
+
+        // verify we can move the piece again now that it isn't frozen
+        gp1.move(20,20);
+        System.out.println(gp1.getPositionX() + ", " + gp1.getPositionY());
+
+
     }
 }
